@@ -1,38 +1,337 @@
-.App {
+
+  html,
+body {
+  min-width: 290px;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color:#4d4e53;
+  background-color: rgb(165 132 66 / 68%);
+}
+
+header {
+  color: #010f1c;
+  margin: 10px;
   text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+  margin-top: 5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* #main-doc header {
+  text-align: left;
+  margin: 0px;
+} */
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#navbar li {
+ 
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #010f1c;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+  }
+  
+  #main-doc .main-section .title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #010f1c;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: thin;
+    margin-top: 3rem;
+  }
+  
+
+
+
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightblue;
+  height: 150vh;
+}
+
+.content {
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  height: 130vh;
+}
+
+.table {
+  width: 100%;
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table td {
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  margin-right: 5px;
+}
+.wrapper body {
+  background-color: lightblue;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group label{
+font-weight: bold;
+}    
+.signup-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.signup-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  background-color: #282828;
+}
+
+h2 {
+  margin-bottom: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #161515;
+  color:white ;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width:100%;
+}
+
+button.login-button {
+  background-color: #161515;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width:100%;
+}
+
+p {
+  margin-top: 5px;
+  color: white;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160vh;
+  background-color: lightblue;
+}
+
+.content {
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  height: 140vh;
+}
+
+.table {
+  width: 100%;
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table td {
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  margin-right: 5px;
+}
+.forproduct body {
+  background-color: lightblue;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group label{
+font-weight: bold;
+}    
+/* CreateProduct.css */
+.forproduct {
+  background-color: #f2f2f2; /* Set your desired background color */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forproduct .form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.forproduct .form-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-success {
+  background-color: #28a745; /* Set your desired button color */
+  color: #fff;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Set your desired button hover color */
 }

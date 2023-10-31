@@ -1,0 +1,92 @@
+.about-page {
+  text-align: center;
+}
+
+.image-overlay {
+  background-image: url('../../img/aboutwall.jpg');
+  background-size: cover;
+  position: relative;
+  height: 500px;
+}
+
+.image-overlay::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#1f1b1b8a;
+}
+
+.centered-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 52px;
+  color: #282828;
+}
+
+.content-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin:4rem;
+}
+.right-content p{
+  font-style: italic;
+}
+.left-content p{
+  font-style:italic;
+}
+.content-section.reversed{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.left-content, .right-content {
+  flex: 1;
+}
+
+.left-content img, .right-content img {
+  width: 100%;
+  height: auto;
+}
+
+/* Reverse the order of content in this section */
+.content-section.reversed .left-content {
+  order: 2;
+}
+
+.content-section.reversed .right-content {
+  order: 1;
+}
+
+@media (max-width: 767px) {
+  .image-overlay {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .centered-text {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+  .content-section{
+    flex-direction: column;
+  }
+
+  .content-section.reversed {
+    flex-direction: column-reverse; /* Display as column on smaller screens */
+  }
+
+  .content-section.reversed .left-content,
+  .content-section.reversed .right-content {
+    order: initial; /* Reset the order for smaller screens */
+  }
+
+  .content-section.reversed .left-content img,
+  .content-section.reversed .right-content img {
+    width: 100%; /* Make the images fill the width */
+  }
+}

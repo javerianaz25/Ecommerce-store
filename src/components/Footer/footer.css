@@ -1,0 +1,222 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.footer
+{
+    padding: 30px 40px;
+    width: 100%;
+    background: #282828;
+}
+.footer .container
+{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .container .about
+{
+    max-width: 30%;
+}
+.footer .container .about .detail p
+{
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+}
+.footer .container .about .detail .icon
+{
+    margin-top: 20px;
+    display: flex;
+}
+.footer .container .about .detail .icon li
+{
+    margin-left: 20px;
+    list-style: none;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.footer .container .about .detail .icon li:hover
+{
+    background: rgb(165 132 66 / 68%);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.footer .container .account
+{
+    margin-right: 100px;
+    margin-top: 30px;
+}
+.footer .container .account h3
+{
+    font-size: 32px;
+    color: white;
+}
+.footer .container .account ul
+{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.footer .container .account ul li
+{
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.footer .container .account ul li:hover
+{
+    color: #ecf2f7;
+
+}
+.footer .container .page
+{
+    margin-right: 100px;
+    margin-top: 30px;
+}
+.footer .container .page h3
+{
+    font-size: 32px;
+    color: white;
+}
+.footer .container .page ul
+{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.footer .container .page ul li
+{
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.footer .container .page ul li:hover
+{
+    color: #ecf2f7;
+}
+.footer .container .logo h2{
+    
+    letter-spacing: 6px;
+    color: white;
+}
+/* Mobile and Tablet styles */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer .container .about,
+    .footer .container .account,
+    .footer .container .page {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .footer .container .about .detail .icon li,
+    .footer .container .account ul li,
+    .footer .container .page ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Desktop styles */
+.footer {
+    padding: 30px 80px;
+    width: 100%;
+    background: #282828;
+}
+
+.footer .container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .container .about {
+    max-width: 30%;
+}
+
+.footer .container .about .detail .icon li {
+    margin-left: 20px;
+    list-style: none;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer .container .about .detail .icon li:hover {
+    background: white;
+    color: #282828;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.footer .container .account,
+.footer .container .page {
+    margin-right: 100px;
+    margin-top: 30px;
+}
+
+.footer .container .account h3,
+.footer .container .page h3 {
+    font-size: 32px;
+    color: white;
+}
+
+.footer .container .account ul,
+.footer .container .page ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.footer .container .account ul li,
+.footer .container .page ul li {
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.footer .container .account ul li:hover,
+.footer .container .page ul li:hover {
+    color:#ecf2f7 ;
+}
+
+.footer .container .logo h2 {
+    letter-spacing: 6px;
+    color: white;
+}
+@media screen and (max-width:715px){
+    .footer .container .about .detail p{
+        width: 16rem;
+    }
+}
+@media screen and (max-width:398px){
+    .footer .container .about .detail .icon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .footer .container .about .detail .icon li{
+        margin: 5px;
+      }
+    .footer .container .about .detail p{
+        width: 3rem;
+    }
+    }
+    
